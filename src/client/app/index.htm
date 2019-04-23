@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <!-- <link href="https://unpkg.com/carbon-components/css/carbon-components.min.css" rel="stylesheet"> -->
+    <link href="https://unpkg.com/carbon-themes/dist/dark-ui.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+  </head>
+  <body>
+    <div data-modal id="no-configuration-modal" class="bx--modal " role="dialog" aria-modal="true" aria-labelledby="my-modal-label" aria-describedby="my-modal-heading" tabindex="-1" >
+      <div class="bx--modal-container">
+        <div class="bx--modal-header">
+          <p class="bx--modal-header__heading bx--type-beta" id="no-configuration-modal-heading"></p>
+        </div>
+        <div class="bx--modal-content">
+          <div>
+            No configuration found for this display.<br><br>
+            Goto <span id="no-configuration-modal-server-url"></span> to configure.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-modal id="error-modal" class="bx--modal " role="dialog" aria-modal="true" aria-labelledby="my-modal-label" aria-describedby="my-modal-heading" tabindex="-1" >
+      <div class="bx--modal-container">
+        <div class="bx--modal-header">
+          <p class="bx--modal-header__heading bx--type-beta" id="my-modal-heading">Fatal Error</p>
+        </div>
+        <div class="bx--modal-content">
+          <div id="error-info"></div>
+          <div id="restarting" class="small">
+            Restarting application in <span id="restart-countdown">30</span> seconds...
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bx--loading-overlay appliation-starting">
+      <div data-loading id="application-starting" class="bx--loading bx--loading--small">
+        <svg class="bx--loading__svg" viewBox="-75 -75 150 150">
+          <title>Starting up...</title>
+          <circle class="bx--loading__background" cx="0" cy="0" r="37.5" />
+          <circle class="bx--loading__stroke" cx="0" cy="0" r="37.5" />
+        </svg>
+      </div>
+    </div>
+
+    <div data-notification id="no-internet-connection" class="bx--toast-notification bx--toast-notification--error" role="alert">
+      <div class="bx--toast-notification__details">
+        <h3 class="bx--toast-notification__title">Unable to connect to internet</h3>
+        <p class="bx--toast-notification__subtitle">Verify network connection</p>
+      </div>
+    </div>
+
+    <webview id="webview-active" src="about:blank" partition="nosave"></webview>
+    <webview id="webview-next-up" src="about:blank" partition="nosave"></webview>
+
+    <script src="https://unpkg.com/carbon-components/scripts/carbon-components.min.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

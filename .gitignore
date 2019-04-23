@@ -1,0 +1,13 @@
+node_modules
+*.log
+docs
+out
+coverage
+.env
+.idea
+yarn.lock
+apiai_agent/Archive.zip
+.DS_Store
+config_exports
+functional-output
+/.vscode

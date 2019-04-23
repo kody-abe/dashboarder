@@ -1,0 +1,24 @@
+{
+  "name": "dashboarder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "NODE_ENV=development CLIENT_NAME=abe-eng-1 SERVER_ADDRESS=http://localhost:3200 electron src/client/index.js",
+    "start-server": "nodemon src/server/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^4.1.4",
+    "electron-reload": "^1.4.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "carbon-components": "^10.1.0",
+    "electron-middle-sass": "^1.0.2",
+    "express": "^4.16.4",
+    "jquery": "^3.4.0",
+    "recursive-readdir": "^2.2.2"
+  }
+}
